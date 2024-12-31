@@ -1,0 +1,63 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+[rank: 0] Seed set to 0
+Using 16bit Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Namespace(txt_file='./assets/book_EN_grimms_fairy_tales.txt', model_type='gpt-mini', block_size=128, use_pretrained=False, abs_emb=False, train_batch_size=128, generate_batch_size=5, generate_every_n_steps=1000, learning_rate=0.0005, weight_decay=0.1, betas=(0.9, 0.95), num_epochs=5, clip_grad_norm=1.0, log_dir='./logs', seed=0, num_workers=8, progress_bar=False, use_flash_attn=True, precision='16-mixed', compile=True, pretrained_tokenizer=False, device='cuda')
+data has 540241 characters, 87 unique.
+True False
+number of parameters: 10.72M
+running on device cpu
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]/home/scur2607/.conda/envs/dl2024/lib/python3.12/site-packages/torch/autograd/graph.py:825: UserWarning: cuDNN SDPA backward got grad_output.strides() != output.strides(), attempting to materialize a grad_output with matching strides... (Triggered internally at /opt/conda/conda-bld/pytorch_1728945370933/work/aten/src/ATen/native/cudnn/MHA.cpp:674.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Finding best initial lr:   1%|          | 1/100 [00:59<1:38:38, 59.78s/it]/home/scur2607/.conda/envs/dl2024/lib/python3.12/site-packages/torch/autograd/graph.py:825: UserWarning: cuDNN SDPA backward got grad_output.strides() != output.strides(), attempting to materialize a grad_output with matching strides... (Triggered internally at /opt/conda/conda-bld/pytorch_1728945370933/work/aten/src/ATen/native/cudnn/MHA.cpp:674.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Finding best initial lr:   2%|▏         | 2/100 [01:11<50:59, 31.22s/it]  Finding best initial lr:   5%|▌         | 5/100 [01:11<14:04,  8.89s/it]Finding best initial lr:   8%|▊         | 8/100 [01:11<06:46,  4.42s/it]Finding best initial lr:  11%|█         | 11/100 [01:11<03:49,  2.58s/it]Finding best initial lr:  14%|█▍        | 14/100 [01:11<02:19,  1.63s/it]Finding best initial lr:  17%|█▋        | 17/100 [01:11<01:29,  1.07s/it]Finding best initial lr:  20%|██        | 20/100 [01:11<00:58,  1.37it/s]Finding best initial lr:  23%|██▎       | 23/100 [01:11<00:38,  1.97it/s]Finding best initial lr:  26%|██▌       | 26/100 [01:11<00:26,  2.79it/s]Finding best initial lr:  29%|██▉       | 29/100 [01:12<00:18,  3.86it/s]Finding best initial lr:  32%|███▏      | 32/100 [01:12<00:12,  5.23it/s]Finding best initial lr:  35%|███▌      | 35/100 [01:12<00:09,  6.93it/s]Finding best initial lr:  38%|███▊      | 38/100 [01:12<00:06,  8.93it/s]Finding best initial lr:  41%|████      | 41/100 [01:12<00:05, 11.17it/s]Finding best initial lr:  44%|████▍     | 44/100 [01:12<00:04, 13.53it/s]Finding best initial lr:  47%|████▋     | 47/100 [01:12<00:03, 15.87it/s]Finding best initial lr:  50%|█████     | 50/100 [01:12<00:02, 18.05it/s]Finding best initial lr:  53%|█████▎    | 53/100 [01:12<00:02, 19.97it/s]Finding best initial lr:  56%|█████▌    | 56/100 [01:13<00:02, 21.57it/s]Finding best initial lr:  59%|█████▉    | 59/100 [01:13<00:01, 22.84it/s]Finding best initial lr:  62%|██████▏   | 62/100 [01:13<00:01, 23.82it/s]Finding best initial lr:  65%|██████▌   | 65/100 [01:13<00:01, 24.56it/s]Finding best initial lr:  68%|██████▊   | 68/100 [01:13<00:01, 25.11it/s]Finding best initial lr:  71%|███████   | 71/100 [01:13<00:01, 25.51it/s]Finding best initial lr:  74%|███████▍  | 74/100 [01:13<00:01, 25.78it/s]Finding best initial lr:  77%|███████▋  | 77/100 [01:13<00:00, 25.99it/s]Finding best initial lr:  80%|████████  | 80/100 [01:13<00:00, 26.14it/s]Finding best initial lr:  83%|████████▎ | 83/100 [01:14<00:00, 26.24it/s]Finding best initial lr:  86%|████████▌ | 86/100 [01:14<00:00, 26.33it/s]Finding best initial lr:  89%|████████▉ | 89/100 [01:14<00:00, 26.39it/s]Finding best initial lr:  92%|█████████▏| 92/100 [01:14<00:00, 26.42it/s]Finding best initial lr:  95%|█████████▌| 95/100 [01:14<00:00, 26.45it/s]Finding best initial lr:  98%|█████████▊| 98/100 [01:14<00:00, 26.46it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [01:14<00:00,  1.34it/s]
+Learning rate set to 0.0005248074602497723
+Restoring states from the checkpoint path at /gpfs/home2/scur2607/Assignment 2/assignment2/part2/.lr_find_9d21e123-893f-4bff-817d-230496801add.ckpt
+Restored all states from the checkpoint at /gpfs/home2/scur2607/Assignment 2/assignment2/part2/.lr_find_9d21e123-893f-4bff-817d-230496801add.ckpt
+
+  | Name  | Type            | Params | Mode 
+--------------------------------------------------
+0 | model | OptimizedModule | 10.8 M | train
+--------------------------------------------------
+10.8 M    Trainable params
+0         Non-trainable params
+10.8 M    Total params
+43.025    Total estimated model params size (MB)
+81        Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at /gpfs/home2/scur2607/Assignment 2/assignment2/part2/.lr_find_9d21e123-893f-4bff-817d-230496801add.ckpt
+SLURM auto-requeueing enabled. Setting signal handlers.
+`Trainer.fit` stopped: `max_epochs=5` reached.
+
+JOB STATISTICS
+==============
+Job ID: 8863608
+Cluster: snellius
+User/Group: scur2607/scur2607
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:16:24
+CPU Efficiency: 6.07% of 04:30:18 core-walltime
+Job Wall-clock time: 00:15:01
+Memory Utilized: 2.39 GB
+Memory Efficiency: 2.00% of 120.00 GB

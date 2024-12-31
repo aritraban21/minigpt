@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_a100
+#SBATCH --gpus=1
+#SBATCH --job-name=ExampleJob
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=9
+#SBATCH --time=00:01:00
+#SBATCH --output=slurm_output_generate_normal.out
+
+module purge
+module load 2023
+module load Anaconda3/2023.07-2
+
+
+# Activate your environment
+source activate dl2024
+# Run your code
+srun python generate.py --model_weights_folder './logs/gpt-mini/version_0/checkpoints'
